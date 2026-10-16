@@ -41,16 +41,16 @@ img{max-width:100%;display:block}
 .main-nav .lang-link{padding-left:18px;border-left:1px solid var(--line)}
 .nav-divider{border-top:1px solid #edf1f5}
 
-.hero{background:linear-gradient(180deg,#fbfcfe 0%,#f7f9fc 100%);padding:0 0 24px}
+.hero{background:#f5f8fc url("assets/hero-background.jpg") center center / cover no-repeat;min-height:560px;}
 .hero-grid{
   display:grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(420px, 1.05fr);
   align-items:stretch;
   gap:0;
-  min-height:600px;
+  min-height:560px;
 }
 .hero-copy{
-  padding:82px 48px 72px 0;
+  padding:70px 48px 65px 0;
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -220,9 +220,11 @@ h1{
   .container{padding:0 24px}
   .header-inner{min-height:76px;align-items:flex-start;flex-direction:column;justify-content:center;padding:10px 0}
   .main-nav{justify-content:flex-start}
+  .hero{background-position:62% center}
   .hero-grid{grid-template-columns:1fr}
   .hero-copy{padding:54px 0 28px}
-  .hero-visual{min-height:380px}
+  .hero-copy{max-width:650px;background:linear-gradient(90deg,rgba(247,249,252,.92),rgba(247,249,252,.55));padding:35px 15px 35px 0}
+  .hero-grid{min-height:450px}
   .pillars-grid{grid-template-columns:repeat(2,1fr)}
   .pillar:nth-child(2){border-right:none}
   .pillar:nth-child(-n+2){border-bottom:1px solid var(--line)}

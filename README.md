@@ -5,7 +5,7 @@ HTML/CSS draft set for the EntangleTune corporate homepage.
 ## Files
 - `index.html`
 - `styles.css`
-- `assets/hero-visual.png`
+- `assets/hero-background.jpg`
 - `assets/project-quantum-instruments.png`
 
 ## Notes
