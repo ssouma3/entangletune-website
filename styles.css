@@ -245,7 +245,24 @@ h1{
   .footer-inner{flex-direction:column;align-items:flex-start}
 }
 
-/* Keep the full hero composition visible when English text makes the section taller. */
+/* English: keep the background image's natural aspect ratio.
+   The image is 1920x640 (3:1). 100% auto never stretches it.
+   An overlay gradually blends the image into the hero background if
+   longer English copy makes the hero taller than the image. */
 html[lang="en"] .hero {
-  background-size: 100% 100%;
+  background-color: #f5f8fc;
+  background-image:
+    linear-gradient(to bottom, rgba(245,248,252,0) 58%, #f5f8fc 100%),
+    url("assets/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% auto;
+  background-position: center center, center top;
+}
+
+/* Narrow screens need the text to remain legible and the graphic to fill. */
+@media (max-width: 1100px) {
+  html[lang="en"] .hero {
+    background-size: 100% 100%, auto 100%;
+    background-position: center, 62% center;
+  }
 }
