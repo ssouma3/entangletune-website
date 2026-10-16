@@ -1,21 +1,17 @@
-# EntangleTune website
+# EntangleTune Website Draft v2
 
-Static HTML/CSS website for EntangleTune. Hosted on Cloudflare Pages via the `main` branch of the GitHub repository `ssouma3/entangletune-website`.
+HTML/CSS draft set for the EntangleTune corporate homepage.
 
 ## Files
-
-- `index.html` — page content
-- `styles.css` — visual styles and responsive layout
-
-## Cloudflare Pages settings
-
-- Framework preset: None
-- Build command: leave blank
-- Build output directory: repository root (blank)
-- Production branch: `main`
-
-To publish updates, commit changed files to `main`. Cloudflare Pages will deploy automatically.
+- `index.html`
+- `styles.css`
+- `assets/hero-visual.png`
+- `assets/project-quantum-instruments.png`
 
 ## Notes
+- The News section has been updated to remove the SISPAD item.
+- This draft reflects the calmer, more corporate concept approved in the mockup discussion.
+- Upload all files and the `assets` folder to the root of the GitHub repository.
 
-The existing official website at `www.entangletune.jp` should remain in place until the new site has been reviewed at `entangletune-website.pages.dev` and the domain configuration is intentionally switched.
+## Deployment
+This project is intended to be deployed via Cloudflare Pages connected to GitHub.
