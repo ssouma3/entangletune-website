@@ -262,3 +262,46 @@ h1{
     background-position: center, 62% center;
   }
 }
+
+/* Mobile layout: content first, then the full-width, undistorted visual.
+   Keep the desktop hero and assets unchanged for both languages. */
+@media (max-width: 700px) {
+  html, body { width:100%; overflow-x:clip; }
+  .container { padding-left:20px; padding-right:20px; }
+  .site-header .header-inner { padding-top:15px; padding-bottom:0; gap:16px; align-items:stretch; }
+  .brand { gap:9px; min-width:0; }
+  .brand-mark { width:36px; flex-shrink:0; }
+  .brand-text strong { font-size:clamp(1.55rem,7vw,1.85rem); }
+  .brand-text small { font-size:.68rem; }
+  .main-nav {
+    display:flex; flex-wrap:nowrap; justify-content:flex-start;
+    gap:14px; width:100%; min-width:0;
+    overflow-x:auto; -webkit-overflow-scrolling:touch;
+    scrollbar-width:none; padding-bottom:12px;
+  }
+  .main-nav::-webkit-scrollbar { display:none; }
+  .main-nav a { flex:0 0 auto; white-space:nowrap; font-size:.82rem; padding:3px 0; }
+  .main-nav .lang-link { padding-left:14px; }
+  .hero,
+  html[lang="en"] .hero {
+    display:flex; flex-direction:column;
+    min-height:0; background:#f5f8fc;
+    background-image:none;
+  }
+  .hero .hero-grid { display:block; min-height:0; }
+  .hero .hero-copy {
+    max-width:none; min-width:0; padding:40px 0 32px;
+    background:none;
+  }
+  .hero h1 { font-size:clamp(2.65rem,11vw,3.8rem); overflow-wrap:anywhere; }
+  .hero .tagline { font-size:clamp(1.28rem,5vw,1.65rem); line-height:1.6; }
+  .hero .lead { font-size:.97rem; line-height:1.85; }
+  .hero::after {
+    content:"";
+    display:block;
+    width:100%;
+    aspect-ratio:3 / 1;
+    background: url("assets/hero-background.jpg") center center / 100% auto no-repeat;
+    flex-shrink:0;
+  }
+}
